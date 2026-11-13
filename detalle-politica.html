@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="theme-color" content="#130622">
+<meta name="color-scheme" content="dark">
+<meta name="format-detection" content="telephone=no">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Sensastreaming">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<link rel="manifest" href="manifest.json">
+<link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+<title>El Cangri: un crimen que se convirtió en meme — Sensastreaming</title>
+<meta name="description" content="Documental de Sensastreaming: El Cangri: un crimen que se convirtió en meme.">
+<link rel="icon" type="image/png" href="https://i.imgur.com/6NUFAMf.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<a class="skip-link" href="#main-content">Saltar al contenido principal</a>
+
+<header class="site-header" id="siteHeader">
+  <div class="header-inner">
+    <a href="index.html" class="brand">
+      <img src="https://i.imgur.com/6NUFAMf.png" alt="Sensastreaming">
+    </a>
+
+    <nav class="site-nav" id="siteNav">
+      <a href="index.html">Inicio</a>
+      <a href="reportajes.html" class="active" aria-current="page">Documentales</a>
+      <a href="podcast.html">Podcast</a>
+      <a href="acerca-de.html">Nosotros</a>
+    </nav>
+
+    <div class="live-clock" id="liveClock" aria-hidden="true">
+      <span class="live-dot"></span>
+      <span class="live-clock-city">Santiago</span>
+      <span class="live-clock-time" id="liveClockTime">00:00:00</span>
+      <span class="live-clock-offset" id="liveClockOffset"></span>
+    </div>
+
+    <span class="header-divider" aria-hidden="true"></span>
+
+    <div class="search-widget" id="searchWidget">
+      <input type="text" class="search-input" id="searchInput" placeholder="Buscar documental..." aria-label="Buscar documental">
+      <button type="button" class="icon-btn search-toggle" id="searchToggle" aria-label="Buscar" aria-expanded="false" aria-controls="searchInput">
+        <svg class="icon-search" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+          <circle cx="11" cy="11" r="7"></circle>
+          <line x1="16.65" y1="16.65" x2="21" y2="21"></line>
+        </svg>
+        <svg class="icon-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+        </svg>
+      </button>
+      <div class="search-results" id="searchResults" role="listbox" aria-label="Resultados de búsqueda"></div>
+    </div>
+
+    <div class="header-icons">
+      <div class="categories-widget" id="categoriesWidget">
+        <button type="button" class="icon-btn" id="categoriesToggle" aria-label="Categorías" aria-expanded="false" aria-controls="categoriesMenu" title="Categorías">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false">
+            <circle cx="5" cy="5" r="2"></circle>
+            <circle cx="12" cy="5" r="2"></circle>
+            <circle cx="19" cy="5" r="2"></circle>
+            <circle cx="5" cy="12" r="2"></circle>
+            <circle cx="12" cy="12" r="2"></circle>
+            <circle cx="19" cy="12" r="2"></circle>
+            <circle cx="5" cy="19" r="2"></circle>
+            <circle cx="12" cy="19" r="2"></circle>
+            <circle cx="19" cy="19" r="2"></circle>
+          </svg>
+        </button>
+        <div class="categories-menu" id="categoriesMenu" role="menu" aria-label="Categorías">
+          <a href="reportajes.html" class="categories-menu-item" role="menuitem">Todos</a>
+          <a href="reportajes.html?categoria=testimonio" class="categories-menu-item" role="menuitem">Testimonios</a>
+          <a href="reportajes.html?categoria=judicial" class="categories-menu-item" role="menuitem">Judicial</a>
+          <a href="reportajes.html?categoria=entrevista" class="categories-menu-item" role="menuitem">Entrevistas</a>
+        </div>
+      </div>
+    </div>
+
+    <button class="nav-toggle" id="navToggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="siteNav">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<div class="ticker" role="marquee" aria-label="Últimas historias">
+  <span class="ticker-sr">Últimas historias: El riesgo de limitar al periodismo. Fuera de los 90 minutos. El Cangri: un crimen que se convirtió en meme. Influencer: El precio de la viralidad</span>
+  <div class="ticker-inner" aria-hidden="true">
+    <div class="ticker-track">
+      <span class="ticker-item"><span class="ticker-tag">Última hora</span>El riesgo de limitar al periodismo</span>
+      <span class="ticker-item"><span class="ticker-tag">Última hora</span>Fuera de los 90 minutos</span>
+      <span class="ticker-item"><span class="ticker-tag">Última hora</span>El Cangri: un crimen que se convirtió en meme</span>
+      <span class="ticker-item"><span class="ticker-tag">Última hora</span>Influencer: El precio de la viralidad</span>
+    </div>
+    <div class="ticker-track">
+      <span class="ticker-item"><span class="ticker-tag">Última hora</span>El riesgo de limitar al periodismo</span>
+      <span class="ticker-item"><span class="ticker-tag">Última hora</span>Fuera de los 90 minutos</span>
+      <span class="ticker-item"><span class="ticker-tag">Última hora</span>El Cangri: un crimen que se convirtió en meme</span>
+      <span class="ticker-item"><span class="ticker-tag">Última hora</span>Influencer: El precio de la viralidad</span>
+    </div>
+  </div>
+</div>
+
+<main id="main-content">
+
+  <section class="detail-hero" style="background-image:url('https://i.imgur.com/Mluwtng.jpeg');">
+    <div class="detail-hero-inner">
+      <h1 class="detail-title">El Cangri: un crimen que se convirtió en meme</h1>
+
+      <div class="detail-actions">
+        <button type="button" class="btn btn-primary btn-play" id="playDocu">▶ Reproducir</button>
+      </div>
+    </div>
+  </section>
+
+  <section class="detail-player" id="detailPlayer" hidden>
+    <video id="docuVideo" controls playsinline preload="metadata" aria-label="El Cangri: un crimen que se convirtió en meme">
+      <source src="https://pub-4d9078245ee945288b7001a9b6d5394e.r2.dev/CANGRI%20FINAL%20DEFINITIVO%204K%20SIN%20HACKS.mp4" type="video/mp4">
+      Tu navegador no admite la reproducción de video.
+    </video>
+  </section>
+
+  <section class="detail-info">
+    <div class="detail-info-main">
+      <p class="detail-meta">Documental • Judicial • 2026 • +16</p>
+      <p class="detail-synopsis">La historia de Sebastián Leiva, más conocido como el “Cangri” en los medios de comunicación, nace en el año 2011, en el docureality “Perla, tan real como tú” de Canal 13. Desde entonces su popularidad fue creciendo durante los años debido a su gran carisma frente a la cámara, pero con el pasar del tiempo su vida daría un vuelco frente al camino delictual.<br><br>El martes 19 de febrero de 2019 Sebastián es declarado desaparecido en Antofagasta, y tras una profunda búsqueda su cuerpo fue hallado sin vida días después cerca del cerro Apacheta y el paso fronterizo Hito Cajón, en el altiplano boliviano.<br><br>Los medios de comunicación dieron énfasis a un detalle que no fue profundizado en la investigación de la policía boliviana, pero que hasta el día de hoy convoca múltiples memes acerca de la muerte del “Cangri”.</p>
+    </div>
+
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <img src="https://i.imgur.com/6NUFAMf.png" alt="Sensastreaming" class="footer-logo">
+      <button type="button" class="footer-easter-egg" id="easterEggTrigger" aria-label="Minijuego secreto" title="¿Aburrido? Juega un rato">
+        <span class="mini-stickman" aria-hidden="true">
+          <span class="mini-stickman-head"></span>
+          <span class="mini-stickman-body"></span>
+          <span class="mini-stickman-leg left"></span>
+          <span class="mini-stickman-leg right"></span>
+        </span>
+      </button>
+    </div>
+    <nav class="footer-nav" aria-label="Enlaces del pie de página">
+      <a href="index.html">Inicio</a>
+      <a href="reportajes.html">Documentales</a>
+      <a href="podcast.html">Podcast</a>
+      <a href="acerca-de.html">Nosotros</a>
+    </nav>
+    <p>© 2026 Sensastreaming — Plataforma realizada por estudiantes de periodismo de la Universidad Autónoma. Los videos pertenecen a los respectivos autores del equipo.</p>
+  </div>
+</footer>
+
+<div class="game-overlay" id="gameOverlay">
+  <div class="game-panel" role="dialog" aria-modal="true" aria-label="Minijuego: esquiva los televisores">
+    <button type="button" class="game-close" id="gameClose" aria-label="Cerrar juego">✕</button>
+
+    <div class="game-stage" id="gameStage">
+      <div class="game-score" id="gameScore">00000</div>
+
+      <div class="game-player" id="gamePlayer">
+        <div class="stickman-head"></div>
+        <div class="stickman-body"></div>
+        <div class="stickman-leg left"></div>
+        <div class="stickman-leg right"></div>
+      </div>
+
+      <div class="game-ground"></div>
+
+      <div class="game-message visible" id="gameMessage">
+        <p class="game-message-title">Toca la pantalla o presiona <kbd>Espacio</kbd> para empezar</p>
+        <p class="game-message-hint game-hint-keys">Espacio o ↑ para saltar · ↓ para agacharte</p>
+        <p class="game-message-hint game-hint-touch">Toca la pantalla para saltar · mantén "Agachar" para esquivar</p>
+      </div>
+    </div>
+
+    <button type="button" class="game-duck-btn" id="gameDuckBtn" aria-label="Mantén presionado para agacharte">⬇ Agachar</button>
+
+    <div class="game-over" id="gameOver">
+      <div class="game-over-inner">
+        <h2 class="game-over-title">Has sido absorbido por los medios</h2>
+        <p class="game-over-score">Puntaje: <span id="gameOverScore">00000</span></p>
+        <p class="game-over-status" id="gameOverStatus" aria-live="polite">Conectando con el ranking global…</p>
+
+        <form class="game-initials-form hidden" id="gameInitialsForm" autocomplete="off">
+          <p class="game-initials-label">¡Entraste al Top 5! Ingresa tus iniciales</p>
+          <div class="game-initials-row">
+            <input type="text" id="gameInitialsInput" class="game-initials-input" maxlength="3" autocapitalize="characters" aria-label="Tus iniciales, hasta 3 letras" placeholder="AAA">
+            <button type="submit" class="btn btn-primary game-initials-submit">Guardar</button>
+          </div>
+        </form>
+
+        <div class="game-scoreboard hidden" id="gameScoreboard">
+          <p class="game-scoreboard-title">Top 5 — Sensastreaming Arcade</p>
+          <ol class="game-scoreboard-list" id="gameScoreboardList"></ol>
+        </div>
+
+        <div class="game-over-actions">
+          <button type="button" class="btn btn-primary" id="gameOverRetry">Jugar de nuevo</button>
+          <button type="button" class="game-over-close-link" id="gameOverClose">Cerrar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="script.js"></script>
+<script>
+(function () {
+  var btn = document.getElementById("playDocu");
+  var box = document.getElementById("detailPlayer");
+  var v = document.getElementById("docuVideo");
+  if (!btn || !box || !v) return;
+  btn.addEventListener("click", function () {
+    box.hidden = false;
+    box.scrollIntoView({ behavior: "smooth", block: "center" });
+    var p = v.play(); if (p && p.catch) p.catch(function () {});
+  });
+})();
+</script>
+</body>
+</html>

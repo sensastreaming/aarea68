@@ -187,10 +187,10 @@
   // Catálogo propio del buscador: no depende de qué tarjetas haya en la
   // página actual, así el resultado es el mismo estés donde estés.
   var REPORTAJES = [
-    { title: "El riesgo de limitar al periodismo", videoUrl: "https://pub-4d9078245ee945288b7001a9b6d5394e.r2.dev/FINAL%20MORDAZA%20CON%20HGC.mp4", image: "https://i.imgur.com/goQDQQN.jpeg", detailUrl: "detalle-fama.html" },
-    { title: "Fuera de los 90 minutos", videoUrl: "https://pub-4d9078245ee945288b7001a9b6d5394e.r2.dev/FINAL%20DEPORTES%20AHORA%20SI%20QUE%20SI.mp4", image: "https://i.imgur.com/lAsv4dQ.jpeg", detailUrl: "detalle-deporte.html" },
-    { title: "El Cangri: un crimen que se convirtió en meme", videoUrl: "https://pub-4d9078245ee945288b7001a9b6d5394e.r2.dev/CANGRI%20FINAL%20DEFINITIVO%204K%20SIN%20HACKS.mp4", image: "https://i.imgur.com/Mluwtng.jpeg", detailUrl: "detalle-politica.html" },
-    { title: "Influencer: El precio de la viralidad", videoUrl: "https://pub-4d9078245ee945288b7001a9b6d5394e.r2.dev/INFLUENCERS%20FINAL%20GC.mp4", image: "https://i.imgur.com/LVwCR66.jpeg", detailUrl: "detalle-influencers.html" }
+    { title: "El riesgo de limitar al periodismo", videoUrl: "https://pub-4d9078245ee945288b7001a9b6d5394e.r2.dev/FINAL%20MORDAZA%20CON%20HGC.mp4", image: "https://i.imgur.com/goQDQQN.jpeg", detailUrl: "el-riesgo-de-limitar-al-periodismo.html" },
+    { title: "Fuera de los 90 minutos", videoUrl: "https://pub-4d9078245ee945288b7001a9b6d5394e.r2.dev/FINAL%20DEPORTES%20AHORA%20SI%20QUE%20SI.mp4", image: "https://i.imgur.com/lAsv4dQ.jpeg", detailUrl: "fuera-de-los-90-minutos.html" },
+    { title: "El Cangri: un crimen que se convirtió en meme", videoUrl: "https://pub-4d9078245ee945288b7001a9b6d5394e.r2.dev/CANGRI%20FINAL%20DEFINITIVO%204K%20SIN%20HACKS.mp4", image: "https://i.imgur.com/Mluwtng.jpeg", detailUrl: "el-cangri-un-crimen-que-se-convirtio-en-meme.html" },
+    { title: "Influencer: el precio de la viralidad", videoUrl: "https://pub-4d9078245ee945288b7001a9b6d5394e.r2.dev/INFLUENCERS%20FINAL%20GC.mp4", image: "https://i.imgur.com/LVwCR66.jpeg", detailUrl: "influencer-el-precio-de-la-viralidad.html" }
   ];
 
   function clearResults() {
@@ -601,7 +601,7 @@
     });
 
     // Si se llegó desde el mini-menú "Categorías" del header
-    // (reportajes.html?categoria=judicial), deja ese tab ya activo.
+    // (reportajes.html?categoria=policial), deja ese tab ya activo.
     var requestedCategory = new URLSearchParams(window.location.search).get("categoria");
     if (requestedCategory) {
       var matchingTab = filterTabs.filter(function (t) {
